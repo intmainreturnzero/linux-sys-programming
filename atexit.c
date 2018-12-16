@@ -20,14 +20,20 @@ void print_failure()
 
 int main()
 {	
-	if (atexit(exit_handler_1))
-	{
-		print_failure();
+	long atexit_max = sysconf(_SC_ATEXIT_MAX);
+	printf("System supports max atexit stack size %ld\n", atexit_max);
+
+	if (atexit_max > 2) {
+		if (atexit(exit_handler_1))
+		{
+			print_failure();
+		}
+		if (atexit(exit_handler_2))
+		{
+			print_failure();
+		}
 	}
-	if (atexit(exit_handler_2))
-	{
-		print_failure();
-	}
+	
 
 	printf("Exiting program from main...\n");
 
