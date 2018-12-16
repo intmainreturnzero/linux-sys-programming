@@ -14,6 +14,7 @@ int main()
 
 	// The following call will start executing the pid binary.
 	// This will have the same PID as process executing this binary. This can be seen from output.
+	// Anything after execl call won't be executed unless execl fails.
 	int ret = execl("./pid", "pid", NULL);
 
 	if (ret == -1)
