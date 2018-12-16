@@ -32,5 +32,5 @@ int main()
 	}
 
 	// End parent and child process with 0
-	return 0;
+	exit(EXIT_SUCCESS);
 }
