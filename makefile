@@ -1,4 +1,4 @@
-all: directories pid execl fork atexit
+all: directories pid execl fork atexit wait
 
 directories:
 	 mkdir -p bin
@@ -14,3 +14,6 @@ fork: pid
 
 atexit:
 	gcc atexit.c -o bin/atexit
+
+wait:
+	gcc wait.c -o bin/wait
