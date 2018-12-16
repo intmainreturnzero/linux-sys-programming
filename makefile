@@ -1,4 +1,4 @@
-all: directories pid execl fork
+all: directories pid execl fork atexit
 
 directories:
 	 mkdir -p bin
@@ -11,3 +11,6 @@ execl: pid
 
 fork: pid
 	gcc fork.c -o bin/fork
+
+atexit:
+	gcc atexit.c -o bin/atexit
