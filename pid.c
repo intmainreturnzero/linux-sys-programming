@@ -7,6 +7,6 @@
 
 int main()
 {
-	printf ("My pid=%jd\n", (intmax_t) getpid());
+	printf ("My (getpid's) pid=%jd\n", (intmax_t) getpid());
 	return 0;
 }
